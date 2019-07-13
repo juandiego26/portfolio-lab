@@ -65,12 +65,43 @@ h1 strong {
   width: 500px;
 }
 
+/*------------------------------------*\
+  #INIT SECTION HEADER
+\*------------------------------------*/
 .header {
   background-color: #1b2127;
   color: white;
+  display: flex; /* flexbox */
+  height: 90px; /* damos al header un alto fijo de 90px*/
+  /* align-items: center; */
+  justify-content: space-between; /* para poner los elementos al lado del otro sin espacio*/
 }
 
+ol, li {
+  margin: 0; /* quitar los margenes de ul y ol*/
+  padding: 0; /* quitar los padding de ul y ol*/
+  list-style: none; /* para quitar los numeros de la ol */
+  display: flex; /* para poner que los elementos se alinen de forma row del display */
+  height: inherit; /* hereda el alto de 90px del header */
+}
+
+figure {
+  margin: 0; /*quitar los margenes a figure*/
+}
+
+.menu {
+  display: flex; /* para que menu le pueda heredar a ol y a li*/
+  height: inherit; /* para que le herede a los ol el ancho de 90px del header*/
+}
 .header a {
+  /* display: block; */
   color: white;
   text-decoration: none;
+  display: flex; /* display flex de las anclas */
+  align-items: center; /* para que centren los elementos*/
+  height: inherit; /* para que los elementos a hereden los 90px */
+  padding: 0 10px;
 }
+/*------------------------------------*\
+  #END SECTION HEADER
+\*------------------------------------*/
