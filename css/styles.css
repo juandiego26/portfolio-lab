@@ -1,9 +1,84 @@
-/*------------------------------------*\
-  #INIT GLOBAL STYLES
-\*------------------------------------*/
-body {
-  font-family: 'Source Sans Pro', sans-serif;
+/* Estilo del header haciendo uso de flex */
+body{
   margin: 0;
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+header{
+  background: #1b2127;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 70px;
+  position: fixed;
+  box-shadow: 0 10px 10px 0px rgba(5, 5, 5, 0.4);
+  z-index: 1;
+  width: 1024px;
+}
+
+.logo img{
+  height: 70px;
+  padding: 0 0 0 20px;
+}
+
+.menu{
+  height: inherit;
+}
+
+.menu ul{
+  height: inherit;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: inherit;
+  width: auto;
+}
+
+.menu a{
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22px;
+  padding: 0 10px;
+}
+
+.work2{
+  padding: 0px 20px 0px 10px;
+}
+
+.work2 a{
+  padding: 0.3em 1em 0.3em 1em;
+  border: 1px solid;
+  border-radius: 4px;
+  height: initial;
+}
+
+.hero{
+  display: flex;
+  background-color: #1d252c;
+  margin-top: 0;
+  height: 380px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 70px;
 }
 
 h1,
@@ -11,293 +86,393 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6{
   font-family: 'Fjalla One', sans-serif;
-  font-weight: normal; /* Es la fuente 400 */
-  /* font-style: italic; */
+  font-weight: normal;
 }
 
-h1 {
+h1{
   font-size: 40px;
-  line-height: 1.5em; /* alto de linea 1 es 100% y .5 es el 50% entonces 150%*/
-  letter-spacing: -.2px; /* Espaciado un 20% de un pixel menos*/
+  padding: 0 30px;
   color: white;
-  margin: 0;
-  /* text-transform: uppercase; */
-  /* text-decoration: underline; */
+  /* letter-spacing: 2px; */
+  line-height: 1.6;
+  box-sizing: border-box;
+  width: 50%;
 }
 
-h1 strong {
-  color: #026fff;
+h1 strong{
+  color: #0c60d9;
 }
 
-h2 {
+.hero-right-container{
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+  background-color: #1d252c;
+}
+
+.hero-sub-right{
+  width: 100%;
+  height: 100%;
+  /* transform-origin: bottom left; */
+  /* transform: skew(-6deg); */
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-sub-right img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* transform: skew(6deg); */
+  /* right:16px; */
+  left: 1px;
+  clip-path: polygon(16% 0, 100% 0, 100% 100%, 1% 100%)
+}
+
+.portfolio{
+  background-color: #fafafa;
+  padding: 20px;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+.anchor-portfolio {
+  position: relative;
+  /* border: 1px solid red; */
+  top: -50px;
+}
+
+.anchor-experience {
+  position: relative;
+  /* border: 1px solid red; */
+  top: -65px;
+}
+
+.portfolio-title{
   color: #026fff;
+  font-weight: bold;
   text-transform: uppercase;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 40px;
+  font-size: 26px;
+  /* padding-left: 25px; */
+  margin-top: 26px;
+  margin-bottom: 46px;
 }
-/*------------------------------------*\
-  #END GLOBAL STYLES
-\*------------------------------------*/
 
-/*------------------------------------*\
-  #INIT SECTION HERO
-\*------------------------------------*/
+.projects-container {
+  padding-left: 20px;
+}
 
-.hero {
-  height: 300px;
-  background-image: url('../images/hero.jpg'); /* poner una imagen de background */
-  background-color: #1b2127;
-  background-size: 500px 300px;
-  background-repeat: no-repeat;
-  background-position-x: right;
+.project{
+  padding: 26px;
+  background-color: white;
+  box-shadow: 0px 0px 15px 1px rgba(224, 224, 224,1);
+  margin-bottom: 20px;
+  border-radius: 5px;
   display: flex;
-  align-items: center;
-}
-
-/*------------------------------------*\
-  #END SECTION HERO
-\*------------------------------------*/
-
-/*------------------------------------*\
-  #INIT SECTION PORTFOLIO
-\*------------------------------------*/
-
-.portfolio {
-  background: #fafafa;
-  padding: 20PX;
-}
-
-.project {
-  /* border-top: 10px solid tomato;
-  border-right: 10px solid green;
-  border-left: 10px solid orange;
-  border-bottom: 10px solid pink; */
-  /* border-top-color: tomato;
-  border-top-width: 15px;
-  border-top-style: solid; */
-  /* margin: 10px; */
-  border: 1px solid gray;
-  border-radius: 10px;
-  /* border-top-left-radius: 50px; */
-  margin-bottom: 15px;
-  padding: 20px;
-  background: white;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-.project-course,
-.project-date,
-.project-url {
-  margin: 10px 0;
+.project div{
+  width: 48%;
 }
 
-.project-description {
-  font-size: 20px;
+.project-left-content{
+  text-align: left;
+
 }
 
-.project strong {
-  font-family: 'Fjalla One', sans-serif;
+.project-right-content{
+  text-align: right;
 }
 
-.project-title {
-  font-size: 30px;
+.project-title{
+  font-size: 32px;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0.3em;
 }
 
-.project-datails {
+.project-stack{
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  color: #717171;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+
+.project-date{
+  margin-top: 0;
+  margin-bottom: 0.6em;
+}
+
+.project-date span{
+  color: #717171;
+}
+
+.project-url{
+  margin-top: 0;
+}
+
+.project-url a{
+  color: #717171;
+}
+
+.project-description{
+  margin-top: 1.8em;
+  line-height: 1.5em;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.project-right-content img{
   width: 500px;
 }
 
-.project-imageContainer {
-  width: 500px;
-}
-/*------------------------------------*\
-  #END SECTION PORTFOLIO
-\*------------------------------------*/
-
-
-/*------------------------------------*\
-  #INIT SECTION HEADER
-\*------------------------------------*/
-.header {
-  background-color: #1b2127;
-  color: white;
-  display: flex; /* flexbox */
-  height: 70px; /* damos al header un alto fijo de 90px*/
-  align-items: center;
-  justify-content: space-between; /* para poner los elementos al lado del otro sin espacio*/
+.experience{
+  background-color: #fafafa;
+  padding: 20px;
+  padding-top: 15px;
+  padding-left: 0;
 }
 
-ol, li {
-  margin: 0; /* quitar los margenes de ul y ol*/
-  padding: 0; /* quitar los padding de ul y ol*/
-  list-style: none; /* para quitar los numeros de la ol */
-  display: flex; /* para poner que los elementos se alinen de forma row del display */
-  height: inherit; /* hereda el alto de 90px del header */
+.experience-title{
+  color: #026fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 26px;
+  margin-top: 0;
+  margin-bottom: 46px;
 }
 
-figure {
-  margin: 0; /*quitar los margenes a figure*/
-}
-
-.menu {
-  display: flex; /* para que menu le pueda heredar a ol y a li*/
-  height: inherit; /* para que le herede a los ol el ancho de 90px del header*/
-}
-.header a {
-  /* display: block; */
-  color: white;
-  text-decoration: none;
-  display: flex; /* display flex de las anclas */
-  align-items: center; /* para que centren los elementos*/
-  height: inherit; /* para que los elementos a hereden los 90px */
-  padding: 0 10px;
-}
-/*------------------------------------*\
-  #END SECTION HEADER
-\*------------------------------------*/
-
-/*------------------------------------*\
-  #INIT SECTION EVENTS
-\*------------------------------------*/
-
-.event-list {
+.experience-container{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10px;
 }
 
-.event-list-title {
-  margin-left: 20px;
-}
-
-.event {
-  margin: 10px;
-  width: 480px;
-  flex-shrink: 0;
-  border-radius: 10px;
+.article-card{
+  width: 47%;
+  background-color: #f4fbff;
+  height: 500px;
+  margin: 10px auto;
+  border-radius: 7px;
   overflow: hidden;
-  background: #f4fbff;
+  box-shadow: 0px 0px 15px 1px rgba(224, 224, 224,1);
 }
 
-.event img {
-  width: 480px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.event-detail {
-  margin: 20px 40px;
-  margin-top: -40px;
+.article-card div{
+  width: 85%;
+  margin: auto;
   background-color: white;
   position: relative;
-  padding: 20px;
+  top: -54px;
+  border-radius: 3px;
   text-align: center;
 }
 
-.event-description {
-  text-align: left;
+.card-image-container{
+  margin: 0;
+  height: 45%;
 }
 
-.event-url {
-  color: #056fff;
-  border: 1px solid;
-  padding: 5px 20px;
+.card-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title{
+  text-align: center;
+  font-size: 1.7em;
+  padding: 1em;
+  margin: 0;
+}
+
+.card-description{
+  margin: 0;
+  padding: 18px;
+  padding-top: 0;
+  font-size: 1.2em;
+  text-align: justify;
+  color: #717171;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+.card-button{
+  text-align: center;
   text-decoration: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #026fff;
+  padding: 0.3em 2.8em;
+  border: 1px solid;
   border-radius: 5px;
-}
-
-/*------------------------------------*\
-  #END SECTION EVENTS
-\*------------------------------------*/
-
-/*------------------------------------*\
-  #INIT SECTION CONTACTS
-\*------------------------------------*/
-.contact {
-  background: #056fff;
-  color: white;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.social {
-}
-
-.social-link {
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-size: 50px 50px;
-  margin: 0 10px;
+  margin: 0.3em 0 1.2em;
 }
 
-.social-link.twitter {
-  background-image: url('../images/twitter.svg');
-}
-.social-link.facebook {
-  background-image: url('../images/facebook.svg');
-}
-.social-link.github {
-  background-image: url('../images/github.svg');
-}
-.social-link.instagram {
-  background-image: url('../images/instagram.svg');
-}
-.form-email input {
-  border-color: gray;
-  border-radius: 5px;
-  border-style: solid;
-  padding: 10px 20px 10px 25px;
-  background-image: url('../images/envelope.svg');
-  background-size: 15px 15px;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: 5px;
+.portfolio-experience-container {
+  border-left: 15px solid #026fff;
 }
 
-.form-email button {
-  display: block;
-  background: transparent;
-  color: white;
-  padding: 10px 0px;
-  border-radius: 5px;
-  width: 100px;
-  margin-top: 10px;
+.portfolio-title::before, .experience-title::before {
+  content: '';
+  display: inline-block;
+  width: 0.9em;
+  height: 1.3em;
+  border-radius: 0 0.65em 0.65em 0;
+  background-color: #026fff;
+  vertical-align: middle;
+  margin-right: 0.8em;
 }
-
-.form-email h3 {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-/*------------------------------------*\
-  #END SECTION CONTACT
-\*------------------------------------*/
-
-
-/*------------------------------------*\
-  #INIT SECTION FOOTER
-\*------------------------------------*/
-
-.footer {
-  color: white;
-  background-color: #1b2127;
+.contact{
+  background-color: #026fff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.footer img {
+.social{
+  height: 61px;
+}
+
+.contact h2{
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  /* margin-top: 2em; */
+}
+
+.contact-left{
+  /* padding-left: 5em; */
+  margin-bottom: 20px;
+}
+.contact h2::before {
+  content: '';
+  display: inline-block;
+  width: 0.9em;
+  height: 1.3em;
+  border-radius: 0 0.65em 0.65em 0;
+  background-color: #358cff;
+  vertical-align: middle;
+  margin-right: 0.8em;
+}
+
+.contact-title {
+  padding-top: 2em;
+  border-left: 15px solid #358cff;
+}
+
+.email-box{
+  display: block;
+  padding: 0.7em 3.8em 0.7em 3em;
+  border-radius: 5px;
+  border: 1px solid #717171;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.email-box::placeholder{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #717171;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.email-group{
+  position: relative;
+}
+
+.form-container {
+  padding-top: 1em;
+  padding-left: 3.5em;
+}
+
+.email-envelope img{
+  height: 20px;
+  position: absolute;
+  left: 17px;
+  top: 12px;
+  fill: #717171;
+}
+
+.send-button{
+  margin: 1em;
+  margin-left: 0;
+  background-color: transparent;
+  height: 2.4em;
+  width: 8.6em;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-right{
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 3em;
+}
+
+footer{
+  background-color: #1d252c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.2em;
+}
+
+.footer-left{
+  padding-left: 1em;
+}
+
+.footer-left p{
+  display: inline-block;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.footer-left img{
+  height: 40px;
   vertical-align: middle;
 }
 
-.footer a {
+.footer-right{
   color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  padding-right: 20px;
+  font-size: 1.1em;
+}
+
+.footer-right p{
+  display: inline-block;
+}
+
+.footer-right a{
+  color: inherit;
+}
+
+.footer-circle{
+  display: inline-block;
+  height: 0.6em;
+  width: 0.6em;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
 }
