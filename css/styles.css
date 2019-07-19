@@ -1,84 +1,9 @@
 /* Estilo del header haciendo uso de flex */
-body{
+/*__________Globals styles*/
+body {
   margin: 0;
   display: block;
   font-family: 'Source Sans Pro', sans-serif;
-}
-
-.container{
-  margin: 0 auto;
-  max-width: 1024px;
-}
-
-header{
-  background: #1b2127;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 70px;
-  position: fixed;
-  box-shadow: 0 10px 10px 0px rgba(5, 5, 5, 0.4);
-  z-index: 1;
-  width: 1024px;
-}
-
-.logo img{
-  height: 70px;
-  padding: 0 0 0 20px;
-}
-
-.menu{
-  height: inherit;
-}
-
-.menu ul{
-  height: inherit;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu li{
-  display: flex;
-  align-items: center;
-  list-style: none;
-  height: inherit;
-  width: auto;
-}
-
-.menu a{
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  height: inherit;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 22px;
-  padding: 0 10px;
-}
-
-.work2{
-  padding: 0px 20px 0px 10px;
-}
-
-.work2 a{
-  padding: 0.3em 1em 0.3em 1em;
-  border: 1px solid;
-  border-radius: 4px;
-  height: initial;
-}
-
-.hero{
-  display: flex;
-  background-color: #1d252c;
-  margin-top: 0;
-  height: 380px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 70px;
 }
 
 h1,
@@ -104,15 +29,97 @@ h1{
 h1 strong{
   color: #0c60d9;
 }
+/*__________End Globals styles*/
 
-.hero-right-container{
+/*__________Main container styles*/
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+/*__________End Main container styles*/
+
+/*__________Header*/
+header {
+  background: #1b2127;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 70px;
+  position: fixed;
+  box-shadow: 0 10px 10px 0px rgba(5, 5, 5, 0.4);
+  z-index: 1;
+  width: 1024px;
+}
+
+.logo img {
+  height: 70px;
+  padding: 0 0 0 20px;
+}
+
+.menu {
+  height: inherit;
+}
+
+.menu ul {
+  height: inherit;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: inherit;
+  width: auto;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22px;
+  padding: 0 10px;
+}
+
+.work2 {
+  padding: 0px 20px 0px 10px;
+}
+
+.work2 a {
+  padding: 0.3em 1em 0.3em 1em;
+  border: 1px solid;
+  border-radius: 4px;
+  height: initial;
+}
+/*__________End header*/
+
+/*__________Hero*/
+.hero {
+  display: flex;
+  background-color: #1d252c;
+  margin-top: 0;
+  height: 380px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 70px;
+}
+
+.hero-right-container {
   overflow: hidden;
   width: 50%;
   height: 100%;
   background-color: #1d252c;
 }
 
-.hero-sub-right{
+.hero-sub-right {
   width: 100%;
   height: 100%;
   /* transform-origin: bottom left; */
@@ -121,7 +128,7 @@ h1 strong{
   position: relative;
 }
 
-.hero-sub-right img{
+.hero-sub-right img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -129,9 +136,11 @@ h1 strong{
   /* transform: skew(6deg); */
   /* right:16px; */
   left: 1px;
-  clip-path: polygon(16% 0, 100% 0, 100% 100%, 1% 100%)
+  clip-path: polygon(16% 0, 100% 0, 100% 100%, 1% 100%);
 }
+/*__________End Hero*/
 
+/*__________Portfolio*/
 .portfolio{
   background-color: #fafafa;
   padding: 20px;
@@ -139,16 +148,10 @@ h1 strong{
   padding-left: 0;
 }
 
-.anchor-portfolio {
+.anchor-portfolio { /*anchor for styky header*/
   position: relative;
   /* border: 1px solid red; */
   top: -50px;
-}
-
-.anchor-experience {
-  position: relative;
-  /* border: 1px solid red; */
-  top: -65px;
 }
 
 .portfolio-title{
@@ -230,12 +233,20 @@ h1 strong{
 .project-right-content img{
   width: 500px;
 }
+/*__________End Portfolio*/
 
+/*__________Experience*/
 .experience{
   background-color: #fafafa;
   padding: 20px;
   padding-top: 15px;
   padding-left: 0;
+}
+
+.anchor-experience { /* anchor for stcky header*/
+  position: relative;
+  /* border: 1px solid red; */
+  top: -65px;
 }
 
 .experience-title{
@@ -316,7 +327,9 @@ h1 strong{
   display: inline-block;
   margin: 0.3em 0 1.2em;
 }
+/*__________Experience*/
 
+/*__________Portfolio and experience container*/
 .portfolio-experience-container {
   border-left: 15px solid #026fff;
 }
@@ -331,6 +344,74 @@ h1 strong{
   vertical-align: middle;
   margin-right: 0.8em;
 }
+/*__________ End Portfolio and experience container*/
+
+/*__________Leo skills */
+.skills-container {
+  border-left: 15px solid #026fff;
+}
+.leo-skills {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.leo-skills-left, 
+.leo-skills-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.leo-skills-left div span, 
+.leo-skills-right div span {
+  height: auto;
+  width: auto;
+  padding: 5px 20px;
+  margin: 0 20px;
+  color: #fff;
+  background-color: #026fff;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.leo-skills-left .row-1,
+.leo-skills-left .row-3,
+.leo-skills-left .row-5,
+.leo-skills-right .row-1,
+.leo-skills-right .row-3,
+.leo-skills-right .row-5
+{
+    display: inherit;
+    justify-content: space-between;
+}
+
+.leo-skills-left .row-2,
+.leo-skills-left .row-4,
+.leo-skills-left .row-6,
+.leo-skills-right .row-2,
+.leo-skills-right .row-4,
+.leo-skills-right .row-6
+{
+    display: inherit;
+    justify-content: center;
+}
+
+.leo-skills figure
+{
+  margin: 0;
+  display: inherit;
+  padding-top: 10px;
+}
+
+.leo-img
+{
+    height: 500px;
+}
+
+
+/*__________End Leo skils */
+
+/*__________Contact*/
 .contact{
   background-color: #026fff;
   display: flex;
@@ -425,7 +506,9 @@ h1 strong{
   justify-content: space-around;
   padding-right: 3em;
 }
+/*_________End Contact*/
 
+/*__________Footer*/
 footer{
   background-color: #1d252c;
   display: flex;
@@ -476,3 +559,4 @@ footer{
   margin-left: 0.8em;
   margin-right: 0.8em;
 }
+/*__________End footer*/
