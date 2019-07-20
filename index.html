@@ -31,9 +31,9 @@
       </div>
       <nav class="menu">
         <ul>
-          <li><a href="#portafolio">Portafolio</a></li>
-          <li><a href="#experiencia">Experiencia</a></li>
-          <li class="work2"><a href="#contacto">Trabajemos Juntos</a></li>
+          <li><a onclick="removeHash('portafolio')">Portafolio</a></li>
+          <li><a onclick="removeHash('experiencia')">Experiencia</a></li>
+          <li class="work2"><a onclick="removeHash('contacto')">Trabajemos Juntos</a></li>
         </ul>
       </nav>
     </header>
@@ -51,7 +51,7 @@
     <!--Portfolio and experience-->
     <div class="portfolio-experience-container">
       <section class="portfolio">
-        <a class="anchor-portfolio" name="portafolio">&nbsp;</a>
+        <a class="anchor-portfolio" id="portafolio">&nbsp;</a>
         <h2 class="portfolio-title">Portafolio (Proyectos Destacados)</h2>
         <div class="projects-container">
           <article class="project">
@@ -93,7 +93,7 @@
         </div>
       </section>  <!--/porfolio-->
       <section class="experience"> <!--Experiencie-->
-        <a class="anchor-experience" name="experiencia">&nbsp;</a>
+        <a class="anchor-experience" id="experiencia">&nbsp;</a>
         <h2 class="experience-title">Más sobre mi experiencia</h2>
         <div class="experience-container">
           <article class="article-card">
@@ -227,5 +227,11 @@
     </footer>
     <!--/Footer-->
   </div> <!--/Main container-->
+  <script>
+    function removeHash(elementId) {
+      var element = document.getElementById(elementId)
+      element.scrollIntoView(true)
+    }
+  </script>
 </body>
 </html>

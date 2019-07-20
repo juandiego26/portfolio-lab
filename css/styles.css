@@ -86,7 +86,9 @@ header {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
   padding: 0 10px;
+  cursor: pointer;
 }
+
 
 .work2 {
   padding: 0px 20px 0px 10px;
