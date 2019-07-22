@@ -14,26 +14,28 @@
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
-  <style>
+  <!-- <style>
     html {
       scroll-behavior: smooth; /* para que el scroll sea suave */
     }
-  </style>
+  </style> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="container"> <!--Main container-->
     <!--Header-->
+    <a class="anchor-inicio" id="inicio">
     <header>
       <div class="logo">
-        <a href="#">
+        <a href="#inicio">
           <img src="images/logo.png" alt="Logo Juan Diego Silva">
         </a>
       </div>
       <nav class="menu">
         <ul>
-          <li><a onclick="removeHash('portafolio')">Portafolio</a></li>
-          <li><a onclick="removeHash('experiencia')">Experiencia</a></li>
-          <li class="work2"><a onclick="removeHash('contacto')">Trabajemos Juntos</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li class="work2"><a href="#contacto">Trabajemos Juntos</a></li>
         </ul>
       </nav>
     </header>
@@ -228,10 +230,27 @@
     <!--/Footer-->
   </div> <!--/Main container-->
   <script>
-    function removeHash(elementId) {
-      var element = document.getElementById(elementId)
-      element.scrollIntoView(true)
-    }
+    // function removeHash(elementId) {
+    //   var element = document.getElementById(elementId)
+    //   element.scrollIntoView(true)
+    // }
+
+    // function removeHash() {
+    // // Ejecutar en una tarea asíncrona para eliminar el hash
+    //   setTimeout(function() {
+    //     window.history.replaceState(null, null, ' ');
+    //   }, )
+    // }
+    // const removeLnk = document.getElementById(elementId)
+    
+    // const removeLnk = document.getElementById('remove')
+    $('header a').click(function(e){
+      e.preventDefault()
+      var strAncla = $(this).attr('href');
+        $('body, html').stop(true, true).animate({
+          scrollTop: $(strAncla).offset().top
+        }, 800)
+    });
   </script>
 </body>
 </html>

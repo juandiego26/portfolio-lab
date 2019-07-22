@@ -52,6 +52,11 @@ header {
   width: 1024px;
 }
 
+.anchor-inicio {
+  position: absolute;
+  /* border: 1px solid red; */
+}
+
 .logo img {
   height: 70px;
   padding: 0 0 0 20px;
@@ -86,7 +91,6 @@ header {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
   padding: 0 10px;
-  cursor: pointer;
 }
 
 
