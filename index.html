@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Hola soy Juan Diego Silva</title>
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -13,10 +13,16 @@
   <meta name="msapplication-TileColor" content="#2d89ef">
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" media="screen and (max-width:768px)" href="css/mobile.css"> -->
   <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
   <!-- <style>
-    html {
-      scroll-behavior: smooth; /* para que el scroll sea suave */
+    /* html {
+      scroll-behavior: smooth; /* para que el scroll sea suave
+    } */
+    @media screen and (max-width: 768px) {
+      body {
+        border: 10px solid blue
+      }
     }
   </style> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -35,18 +41,19 @@
         <ul>
           <li><a href="#portafolio">Portafolio</a></li>
           <li><a href="#experiencia">Experiencia</a></li>
-          <li class="work2"><a href="#contacto">Trabajemos Juntos</a></li>
+          <li class="work2"><a href="#contact">Trabajemos Juntos</a></li>
         </ul>
       </nav>
     </header>
     <!--/Header-->
+    <span class="anchor-space">&nbsp;</span>
     <!--Hero-->
     <section class="hero">
-      <h1>Hola! soy <strong>Juan Diego Silva</strong><br/> Desarrollador JavaScript con<br/>pasión por el <strong>FrontEnd</strong> y el <strong>BackEnd</strong></h1>
+      <div class="hero-left-container">
+        <h1>Hola! soy <strong>Juan Diego Silva</strong><br/> Desarrollador JavaScript con<br/>pasión por el <strong>FrontEnd</strong> y el <strong>BackEnd</strong></h1>
+      </div>
       <div class="hero-right-container">
-        <div class="hero-sub-right">
-          <img src="images/hero.jpg" alt="saludando previo a la clase" height="600">
-        </div>
+        <img src="images/hero.jpg" alt="saludando previo a la clase" height="600">
       </div>
     </section>
     <!--/Hero-->
@@ -196,11 +203,12 @@
       </section>
     </div>
     <!--Contact-->
-    <section class="contact" id="contacto">
+    <section class="contact">
       <div class="contact-left">
         <div class="contact-title">
           <h2>¿Creamos algo juntos?</h2>
         </div>
+        <a class="anchor-contact" id="contact">&nbsp;</a>
         <div class="form-container">
           <div class="email-group">
             <input type="text" placeholder="Déjame tu email" class="email-box">

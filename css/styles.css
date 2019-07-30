@@ -17,13 +17,13 @@ h6{
 }
 
 h1{
-  font-size: 40px;
+  font-size: 2.3em;
   padding: 0 30px;
   color: white;
   /* letter-spacing: 2px; */
   line-height: 1.6;
   box-sizing: border-box;
-  width: 50%;
+  /* width: 50%; */
 }
 
 h1 strong{
@@ -35,6 +35,7 @@ h1 strong{
 .container {
   margin: 0 auto;
   max-width: 1024px;
+  width: 100%;
 }
 /*__________End Main container styles*/
 
@@ -44,12 +45,15 @@ header {
   color: white;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  /* flex: 1; */
   height: 70px;
   position: fixed;
   box-shadow: 0 10px 10px 0px rgba(5, 5, 5, 0.4);
-  z-index: 1;
-  width: 1024px;
+  z-index: 3;
+  /* width: 1024px; */
+  max-width: 1024px;
+  width: 100%;
 }
 
 .anchor-inicio {
@@ -106,6 +110,11 @@ header {
 }
 /*__________End header*/
 
+.anchor-space {
+  display: flex;
+  padding-top: 50px;
+}
+
 /*__________Hero*/
 .hero {
   display: flex;
@@ -114,28 +123,24 @@ header {
   height: 380px;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 70px;
+  /* flex-wrap: wrap; */
+  /* padding-top: 70px; */
+}
+
+.hero-left-container {
+  width: 50%;
+  height: 100%;
 }
 
 .hero-right-container {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 50%;
   height: 100%;
-  background-color: #1d252c;
 }
 
-.hero-sub-right {
-  width: 100%;
-  height: 100%;
-  /* transform-origin: bottom left; */
-  /* transform: skew(-6deg); */
-  overflow: hidden;
-  position: relative;
-}
 
-.hero-sub-right img {
-  position: absolute;
+.hero-right-container img {
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -143,6 +148,7 @@ header {
   /* right:16px; */
   left: 1px;
   clip-path: polygon(16% 0, 100% 0, 100% 100%, 1% 100%);
+  padding-right: 1px;
 }
 /*__________End Hero*/
 
@@ -183,6 +189,7 @@ header {
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .project div{
@@ -191,11 +198,12 @@ header {
 
 .project-left-content{
   text-align: left;
-
+  /* width: 50%; */
 }
 
 .project-right-content{
   text-align: right;
+  /* width: 50%; */
 }
 
 .project-title{
@@ -237,7 +245,7 @@ header {
 }
 
 .project-right-content img{
-  width: 500px;
+  max-width: 100%;
 }
 /*__________End Portfolio*/
 
@@ -275,7 +283,7 @@ header {
 .article-card{
   width: 47%;
   background-color: #f4fbff;
-  height: 500px;
+  height: 100%;
   margin: 10px auto;
   border-radius: 7px;
   overflow: hidden;
@@ -358,22 +366,24 @@ header {
 }
 .leo-skills {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  background-color: #fafafa;
 }
 
 .leo-skills-left, 
 .leo-skills-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .leo-skills-left div span, 
 .leo-skills-right div span {
   height: auto;
   width: auto;
-  padding: 5px 20px;
-  margin: 0 20px;
+  padding: 8px 10px;
+  /* margin: 0 20px; */
+  margin-right: 5px;
   color: #fff;
   background-color: #026fff;
   border-radius: 20px;
@@ -388,7 +398,7 @@ header {
 .leo-skills-right .row-5
 {
     display: inherit;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .leo-skills-left .row-2,
@@ -418,11 +428,16 @@ header {
 /*__________End Leo skils */
 
 /*__________Contact*/
+.anchor-contact {
+  position: absolute;
+  /* border: 1px solid red; */
+}
 .contact{
   background-color: #026fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .social{
@@ -521,6 +536,7 @@ footer{
   justify-content: space-between;
   align-items: center;
   height: 5.2em;
+  flex-wrap: wrap;
 }
 
 .footer-left{
@@ -566,3 +582,225 @@ footer{
   margin-right: 0.8em;
 }
 /*__________End footer*/
+
+/*____________mobile comenzar con el media Query mas grande*/
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 767px) {
+  /* body {
+    border: 10px solid green;
+  } */
+
+  
+
+  .anchor-portfolio {
+    top: -200px;
+  }
+
+  .anchor-experience {
+    top: -230px;
+  }
+
+  .anchor-contact {
+    position: relative;
+    top: -300px;
+  }
+
+  .anchor-space {
+    display: block;
+    padding-top: 200px;
+    background-color: #1d252c;
+  }
+
+  .hero-left-container h1 {
+    font-size: 2em;
+    position: absolute;
+    text-shadow: 1px 2px #000;
+  }
+
+  .hero-right-container img {
+    clip-path: initial;
+    /* filter: opacity(20%) blur(1px); */
+
+  }
+
+  .hero-left-container {
+    height: 100%;
+    width: 0;
+  }
+
+  .hero-right-container {
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  header {
+    height: auto;
+    display: block;
+  }
+  .menu ul {
+    display: block;
+  }
+
+  .menu li {
+    display: block;
+  }
+
+  .menu ul li {
+    height: 50px;
+  }
+
+  .menu li a {
+    justify-content: center;
+  }
+
+  header .logo {
+    text-align: center;
+  }
+
+  .project {
+    display: block;
+  }
+
+  .project div {
+    width: 100%;
+  }
+
+  .project-left-content {
+    width: auto;
+    /* font-size: 16px; */
+  }
+
+  /* .project-title {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+  }
+
+  .project-stack {
+    font-size: 1.2em;
+  }
+
+  .project-date {
+    font-size: 1em;
+  }
+  .project-url {
+    font-size: 1em;
+  }
+
+  .project-description {
+    font-size: .8em;
+  } */
+
+  /* .project-stack, .project-date, .project-url {
+    margin: 0.4em 0;
+  } */
+
+  .project-right-content {
+    width: auto;
+    text-align: center;
+  }
+  .experience-container {
+    display: block;
+  }
+
+  .article-card {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-image-container {
+    height: auto;
+  }
+
+  .leo-skills {
+    display: block;
+  }
+
+  .leo-skills-left div span {
+    padding: 10px 20px;
+    margin: 10px;
+  }
+  
+  .leo-skills-right div span {
+    padding: 10px 20px;
+    margin: 10px;
+  }
+
+  .leo-skills figure {
+    text-align: center;
+  }
+
+  .footer-right p {
+    display: block; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio-title,
+  .experience-title {
+    font-size: 1.4em;
+  }
+  .project-left-content {
+    font-size: 12px;
+  }
+  
+  .contact {
+    display: block;
+  }
+  
+  .email-group, .email-box {
+    display: initial;
+  }
+
+  .form-container {
+    text-align: center;
+    padding-left: 0.5em;
+  }
+
+  .email-envelope img {
+    top: 0;
+  }
+  
+  .contact-right {
+    width: auto;
+    padding: 0 0 1em 0;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+    /* border: 2px solid transparent; */
+    padding: 1em 0;
+  }
+
+  .footer-right {
+    background-color: #1d252c;
+    /* padding: 0; */
+  }
+
+  .footer-left p {
+    margin: 0;
+    /* padding-top: 1em; */
+    /* border: 1px solid transparent; */
+  }
+
+  .footer-right p {
+    margin: 0;
+    padding-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.2em
+  }
+  .portfolio-title,
+  .experience-title,
+  .contact-title {
+    font-size: 0.9em;
+  }
+  
+}
