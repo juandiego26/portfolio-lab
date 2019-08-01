@@ -28,6 +28,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+  <i class="icon-menu burger-button" id="burger-menu"></i>
   <div class="container"> <!--Main container-->
     <!--Header-->
     <a class="anchor-inicio" id="inicio">
@@ -39,9 +40,9 @@
       </div>
       <nav class="menu">
         <ul>
-          <li><a href="#portafolio">Portafolio</a></li>
-          <li><a href="#experiencia">Experiencia</a></li>
-          <li class="work2"><a href="#contact">Trabajemos Juntos</a></li>
+          <li><a class="link" href="#portafolio">Portafolio</a></li>
+          <li><a class="link" href="#experiencia">Experiencia</a></li>
+          <li class="work2 link"><a href="#contact">Trabajemos Juntos</a></li>
         </ul>
       </nav>
     </header>
@@ -218,10 +219,14 @@
         </div>
       </div>
       <div class="contact-right">
-        <a href="#"><img src="images/twitter.svg" alt="logo twitter" class="social"></a>
+        <a href="https://twitter.com/juand_silva" target="_blank" class="social-link icon-twitter"></a>
+        <a href="https://www.facebook.com/silgajuandiego" target="_blank" class="social-link icon-facebook"></a>
+        <a href="https://github.com/juandiego26" target="_blank" class="social-link icon-github"></a>
+        <a href="https://www.instagram.com/juand_silva" target="_blank" class="social-link icon-instagram"></a>
+        <!-- <a href="#"><img src="images/twitter.svg" alt="logo twitter" class="social"></a>
         <a href="#"><img src="images/facebook.svg" alt="logo facebook" class="social"></a>
         <a href="#"><img src="images/github.svg" alt="logo github" class="social"></a>
-        <a href="#"><img src="images/instagram.svg" alt="logo instagram" class="social"></a>
+        <a href="#"><img src="images/instagram.svg" alt="logo instagram" class="social"></a> -->
       </div>
     </section>
     <!--/Contact-->
@@ -259,6 +264,61 @@
           scrollTop: $(strAncla).offset().top
         }, 800)
     });
+     
+    // console.log('Hola es mi primera linea en JS')
+
+    const ipad = window.matchMedia('screen and (max-width: 767px)');
+    const menu = document.querySelector('.menu');
+    // console.log(menu);
+    const burgerButton = document.querySelector('#burger-menu')
+    console.log(ipad);
+
+    if(ipad.matches) {
+      burgerButton.addEventListener('click', hideShow);
+    }
+
+    ipad.addListener(validation)
+
+    function validation(event) {
+      if(event.matches) {
+        burgerButton.addEventListener('click', hideShow);
+        // console.log(event.matches);
+      } else {
+        burgerButton.removeEventListener('click', hideShow)
+      }
+    }
+
+    function hideShow() {
+      if(menu.classList.contains('is-active')) {
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');
+      }
+    }
+
+    const menuLink = document.querySelectorAll('.link');
+
+    menuLink.forEach(element => {
+      element.addEventListener('click', function() {
+        menu.classList.remove('is-active')
+      })
+    });
+    
+    
+    // const menu = document.querySelector(".menu");
+    // const burgerButton = document.querySelector("#burger-menu");
+
+    // burgerButton.addEventListener("click", function() {
+    //   menu.classList.toggle("is-active");
+    // });
+
+    // const menuLink = document.querySelectorAll(".link");
+
+    // menuLink.forEach(function(element) {
+    //   element.addEventListener("click", function() {
+    //     menu.classList.remove("is-active");
+    //   });
+    // });
   </script>
 </body>
 </html>
